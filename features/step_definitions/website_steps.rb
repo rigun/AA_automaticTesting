@@ -12,7 +12,8 @@ wait = Selenium::WebDriver::Wait.new(:timeout => 20)
 key = Selenium::WebDriver::Keys
 Given("Buka website") do
 	driver = Selenium::WebDriver.for :firefox, desired_capabilities: capabilities
-    driver.get('http://localhost:8080/')
+    # driver.get('http://localhost:8080/')
+    driver.get('https://ran.thekingcorp.org/')
 end
 Then("Mengisi data login") do
     driver.find_element(:xpath, '/html/body/div/div/main/div/nav/div[2]/div[2]/div/a').click
